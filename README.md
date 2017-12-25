@@ -44,14 +44,24 @@
                 });
                 
                 
-   c.关联Activity的onActivityResult（）方法
+  c.关联Activity的onActivityResult（）方法
    
-        @Override
+       @Override
        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
            super.onActivityResult(requestCode, resultCode, data);
            // 2、在Activity中的onActivityResult()方法里与之关联
           PhotoUtils.getInstance().bindForResult(requestCode, resultCode, data);
        }
+       
+  d.调用拍照和选择图片的方法
+   
+        PhotoUtils.getInstance().takePhoto();
+        
+        PhotoUtils.getInstance().selectPhoto();
+        
+ ### end、提醒：
+ 
+   别忘记权限申请，项目中使用的是EasyPermissions权限申请，你也可以使用自己熟悉的！！！
      
      
 
