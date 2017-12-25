@@ -30,15 +30,14 @@
         
   b.在onCreate中初始化PhotoUtils 带设置参数（上下文，图片裁剪时的宽度比例，图片裁剪时的高度比例，图片裁剪后的宽度，图片裁剪后的高度，选取图片监                                  听）
   
-      PhotoUtils.getInstance().initParm(this, 2, 1, 400, 400
+       PhotoUtils.getInstance().initParm(this, 2, 1, 400, 400
                 , new PhotoUtils.OnSelectListener() {
                     @Override
                     public void onFinish(File outputFile, Uri outputUri) {
                         // 当拍照或从图库选取图片成功后回调
-                        Glide.with(MainActivity.this).load(outputUri).into(view);
+                        Glide.with(MainActivity.this).load(outputUri).into(mIvPic);
                     }
                 });
-                
                 
   c.关联Activity的onActivityResult（）方法
    
