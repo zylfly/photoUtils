@@ -47,7 +47,7 @@
           PhotoUtils.getInstance().bindForResult(requestCode, resultCode, data);
        }
        
-  d . 调用拍照和选择图片的方法
+ d . 调用拍照和选择图片的方法
    
         PhotoUtils.getInstance().takePhoto();
         
