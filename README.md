@@ -20,11 +20,11 @@
  
   a.在onCreate中初始化PhotoUtils 不带设置参数（上下文，是否裁剪，选取图片监听）
       
-      PhotoUtils.getInstance().init(this, true, new PhotoUtils.OnSelectListener() {
+       PhotoUtils.getInstance().init(this, true, new PhotoUtils.OnSelectListener() {
             @Override
             public void onFinish(File outputFile, Uri outputUri) {
                 // 当拍照或从图库选取图片成功后回调
-                Glide.with(MainActivity.this).load(outputUri).into(view);
+                Glide.with(MainActivity.this).load(outputUri).into(mIvPic);
             }
         });
         
