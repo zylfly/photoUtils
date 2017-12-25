@@ -18,7 +18,7 @@
   
  ### 3、在项目中使用：
  
-   a . 在onCreate中初始化PhotoUtils 不带设置参数（上下文，是否裁剪，选取图片监听）
+  a . 在onCreate中初始化PhotoUtils 不带设置参数（上下文，是否裁剪，选取图片监听）
       
        PhotoUtils.getInstance().init(this, true, new PhotoUtils.OnSelectListener() {
             @Override
@@ -28,7 +28,7 @@
             }
         });
         
-   b . 在onCreate中初始化PhotoUtils 带设置参数（上下文，图片裁剪时的宽度比例，图片裁剪时的高度比例，图片裁剪后的宽度，图片裁剪后的高度，选取图片监                                  听）
+  b . 在onCreate中初始化PhotoUtils 带设置参数（上下文，图片裁剪时的宽度比例，图片裁剪时的高度比例，图片裁剪后的宽度，图片裁剪后的高度，选取图片监                                  听）
   
        PhotoUtils.getInstance().initParm(this, 2, 1, 400, 400
                 , new PhotoUtils.OnSelectListener() {
@@ -39,7 +39,7 @@
                     }
                 });
                 
-   c . 关联Activity的onActivityResult（）方法
+  c . 关联Activity的onActivityResult（）方法
    
        @Override
        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -47,7 +47,7 @@
           PhotoUtils.getInstance().bindForResult(requestCode, resultCode, data);
        }
        
-   d . 调用拍照和选择图片的方法
+  d . 调用拍照和选择图片的方法
    
         PhotoUtils.getInstance().takePhoto();
         
