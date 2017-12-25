@@ -23,10 +23,8 @@
       PhotoUtils.getInstance().init(this, true, new PhotoUtils.OnSelectListener() {
             @Override
             public void onFinish(File outputFile, Uri outputUri) {
-                // 4、当拍照或从图库选取图片成功后回调
-                mTvPath.setText(outputFile.getAbsolutePath());
-                mTvUri.setText(outputUri.toString());
-                Glide.with(MainActivity.this).load(outputUri).into(mIvPic);
+                // 当拍照或从图库选取图片成功后回调(文件和uri)
+                Glide.with(MainActivity.this).load(outputUri).into(view);
             }
         });
         
@@ -36,10 +34,8 @@
                 , new PhotoUtils.OnSelectListener() {
                     @Override
                     public void onFinish(File outputFile, Uri outputUri) {
-                        // 4、当拍照或从图库选取图片成功后回调
-                        mTvPath.setText(outputFile.getAbsolutePath());
-                        mTvUri.setText(outputUri.toString());
-                        Glide.with(MainActivity.this).load(outputUri).into(mIvPic);
+                       // 当拍照或从图库选取图片成功后回调(文件和uri)
+                       Glide.with(MainActivity.this).load(outputUri).into(view);
                     }
                 });
                 
@@ -49,7 +45,6 @@
        @Override
        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
            super.onActivityResult(requestCode, resultCode, data);
-           // 2、在Activity中的onActivityResult()方法里与之关联
           PhotoUtils.getInstance().bindForResult(requestCode, resultCode, data);
        }
        
@@ -60,6 +55,7 @@
         PhotoUtils.getInstance().selectPhoto();
         
  ### end、提醒：
+ 
  
    别忘记权限申请，项目中使用的是EasyPermissions权限申请，你也可以使用自己熟悉的！！！
      
