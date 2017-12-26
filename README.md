@@ -24,7 +24,7 @@
             @Override
             public void onFinish(File outputFile, Uri outputUri) {
                 // 当拍照或从图库选取图片成功后回调
-                Glide.with(MainActivity.this).load(outputUri).into(view);
+               Glide.with(MainActivity.this).load(outputUri).into(view);
             }
         });
         
@@ -35,7 +35,7 @@
                     @Override
                     public void onFinish(File outputFile, Uri outputUri) {
                         // 当拍照或从图库选取图片成功后回调
-                        Glide.with(MainActivity.this).load(outputUri).into(view);
+                       Glide.with(MainActivity.this).load(outputUri).into(view);
                     }
                 });
                 
