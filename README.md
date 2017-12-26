@@ -59,6 +59,8 @@
  
  
    别忘记权限申请，项目中使用的是EasyPermissions权限申请，你也可以使用自己熟悉的！！！
+   
+   ![](http://cdn.duitang.com/uploads/item/201603/06/20160306140033_NiUah.jpeg)
      
      
 
