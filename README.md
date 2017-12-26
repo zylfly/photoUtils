@@ -24,7 +24,7 @@
             @Override
             public void onFinish(File outputFile, Uri outputUri) {
                 // 当拍照或从图库选取图片成功后回调
-                Glide.with(MainActivity.this).load(outputUri).into(mIvPic);
+                Glide.with(MainActivity.this).load(outputUri).into(view);
             }
         });
         
@@ -35,7 +35,7 @@
                     @Override
                     public void onFinish(File outputFile, Uri outputUri) {
                         // 当拍照或从图库选取图片成功后回调
-                        Glide.with(MainActivity.this).load(outputUri).into(mIvPic);
+                        Glide.with(MainActivity.this).load(outputUri).into(view);
                     }
                 });
                 
@@ -44,7 +44,7 @@
        @Override
        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
            super.onActivityResult(requestCode, resultCode, data);
-          PhotoUtils.getInstance().bindForResult(requestCode, resultCode, data);
+           PhotoUtils.getInstance().bindForResult(requestCode, resultCode, data);
        }
        
  d . 调用拍照和选择图片的方法
